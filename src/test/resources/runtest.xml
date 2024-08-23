@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation for Sytner">
+ <parameter name="serverName" value="STAGING" />
+
+    <listeners>
+        <listener class-name="commons.MethodListener" />
+        <listener class-name="reportConfig.AllureTestListener" />
+    </listeners>
+
+    <test name="Run on CHROME">
+        <parameter name="browser" value="CHROME" />
+        <classes>
+            <class name="sytnerWeb.sytner.Homepage_001_MenuItems"/>
+        </classes>
+    </test>
+</suite>
